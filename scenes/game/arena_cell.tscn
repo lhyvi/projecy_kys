@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd2byq3fueo01"]
+
+[ext_resource type="Texture2D" uid="uid://b3876tequdvgq" path="res://assets/level/arena_cell.png" id="1_g1l7k"]
+[ext_resource type="Script" path="res://scenes/game/arena_cell.gd" id="1_uy0rn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paug4"]
+size = Vector2(64, 64)
+
+[node name="Arena_Cell" type="Node2D"]
+use_parent_material = true
+script = ExtResource("1_uy0rn")
+select_color = Color(0.5, 0.5, 0.5, 1)
+raised_color = Color(0.25, 0.25, 0.25, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+use_parent_material = true
+texture = ExtResource("1_g1l7k")
+
+[node name="Area2D" type="Area2D" parent="."]
+use_parent_material = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+use_parent_material = true
+shape = SubResource("RectangleShape2D_paug4")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

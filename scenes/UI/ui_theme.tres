@@ -1,0 +1,60 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cqr5jvlnfnglw"]
+
+[ext_resource type="StyleBox" uid="uid://dap5c2oq6v0rj" path="res://scenes/UI/new_style_box_flat.tres" id="2_5lohr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6bmq"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kroka"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7sgg3"]
+bg_color = Color(0.462745, 0.462745, 0.462745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8m60"]
+bg_color = Color(0.75, 0.75, 0.75, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[resource]
+default_font_size = 25
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.75, 0.75, 0.75, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0.5, 0.5, 0.5, 1)
+Button/colors/font_pressed_color = Color(0.5, 0.5, 0.5, 1)
+Button/font_sizes/font_size = 25
+Button/styles/disabled = SubResource("StyleBoxFlat_r6bmq")
+Button/styles/focus = SubResource("StyleBoxFlat_kroka")
+Button/styles/hover = SubResource("StyleBoxFlat_7sgg3")
+Button/styles/normal = ExtResource("2_5lohr")
+Button/styles/pressed = SubResource("StyleBoxFlat_p8m60")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 25
+Label/styles/normal = ExtResource("2_5lohr")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/bold_font_size = 25
+RichTextLabel/font_sizes/bold_italics_font_size = 25
+RichTextLabel/font_sizes/italics_font_size = 25
+RichTextLabel/font_sizes/mono_font_size = 25
+RichTextLabel/font_sizes/normal_font_size = 25
+RichTextLabel/styles/normal = ExtResource("2_5lohr")

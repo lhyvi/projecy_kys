@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://u05mid78f7ty"]
+
+[ext_resource type="Script" path="res://scenes/UI/actions_ui.gd" id="1_00duk"]
+[ext_resource type="PackedScene" uid="uid://bot8pnlcwvsx" path="res://scenes/UI/action_button.tscn" id="2_fynry"]
+[ext_resource type="PackedScene" uid="uid://b8lp1k4t1xcxu" path="res://scenes/UI/button.tscn" id="2_w0bjl"]
+
+[node name="Actions" type="Control"]
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -240.0
+offset_right = 320.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("1_00duk")
+button_scene = ExtResource("2_fynry")
+
+[node name="OptionContainer" type="GridContainer" parent="."]
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -60.0
+offset_right = 220.0
+offset_bottom = -20.0
+grow_vertical = 0
+columns = 3
+
+[node name="ActionButton" parent="OptionContainer" instance=ExtResource("2_fynry")]
+layout_mode = 2
+
+[node name="ActionButton2" parent="OptionContainer" instance=ExtResource("2_fynry")]
+layout_mode = 2
+
+[node name="Back" parent="." instance=ExtResource("2_w0bjl")]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -53.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Back"
+
+[node name="Wait" parent="." instance=ExtResource("2_w0bjl")]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -53.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Wait"

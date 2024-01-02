@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=3 uid="uid://dej6m2s6q7cg2"]
+
+[ext_resource type="Script" path="res://scenes/UI/pop_up.gd" id="1_d74b5"]
+[ext_resource type="PackedScene" uid="uid://b8lp1k4t1xcxu" path="res://scenes/UI/button.tscn" id="2_4rwra"]
+[ext_resource type="Theme" uid="uid://cqr5jvlnfnglw" path="res://scenes/UI/ui_theme.tres" id="3_hbgho"]
+
+[node name="PopUp" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_d74b5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -240.0
+offset_right = 320.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.498039)
+
+[node name="OkButton" parent="." instance=ExtResource("2_4rwra")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = 113.0
+offset_right = 93.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "OK"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -99.0
+offset_right = 260.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_hbgho")
+text = "You Like cheese?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="YesButton" parent="." instance=ExtResource("2_4rwra")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = 113.0
+offset_right = -57.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Yes"
+
+[node name="NoButton" parent="." instance=ExtResource("2_4rwra")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 57.0
+offset_top = 113.0
+offset_right = 243.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No"
+
+[connection signal="pressed" from="OkButton" to="." method="_on_ok_button_pressed"]
+[connection signal="pressed" from="YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="NoButton" to="." method="_on_no_button_pressed"]

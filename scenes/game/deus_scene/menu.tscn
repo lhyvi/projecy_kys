@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkxrgvsjq5yxp"]
+
+[ext_resource type="Script" path="res://scenes/game/deus_scene/menu.gd" id="1_tp8me"]
+[ext_resource type="PackedScene" uid="uid://bu4ckiyknxcbk" path="res://scenes/shader_camera.tscn" id="2_dkmil"]
+[ext_resource type="PackedScene" uid="uid://b8lp1k4t1xcxu" path="res://scenes/UI/button.tscn" id="2_vscbt"]
+[ext_resource type="Script" path="res://scenes/game/deus_scene/title.gd" id="4_0j4sd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kderu"]
+font_size = 39
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_tp8me")
+main_scene = "res://scenes/game/deus_scene/arena_scene.tscn"
+
+[node name="Camera2D" parent="." instance=ExtResource("2_dkmil")]
+
+[node name="PlayButton" parent="." instance=ExtResource("2_vscbt")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -15.0
+offset_right = 53.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Play"
+
+[node name="ExitButton" parent="." instance=ExtResource("2_vscbt")]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = 70.0
+offset_right = 43.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -170.0
+offset_right = 325.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(323.98, 24.13)
+size_flags_horizontal = 4
+text = "JonixProto"
+label_settings = SubResource("LabelSettings_kderu")
+horizontal_alignment = 1
+script = ExtResource("4_0j4sd")
+
+[node name="PaletteButton" parent="." instance=ExtResource("2_vscbt")]
+offset_left = 92.0
+offset_top = 190.0
+offset_right = 278.0
+offset_bottom = 223.0
+text = "Change Palette"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="PaletteButton" to="." method="_on_palette_button_pressed"]

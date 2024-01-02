@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bovft732h6jli"]
+
+[ext_resource type="PackedScene" uid="uid://bu4ckiyknxcbk" path="res://scenes/shader_camera.tscn" id="1_5y1sr"]
+[ext_resource type="Script" path="res://scenes/game/game_manager.gd" id="1_npu6t"]
+[ext_resource type="PackedScene" uid="uid://juwjx5dbvhw7" path="res://scenes/game/arena.tscn" id="1_p8e1v"]
+[ext_resource type="Texture2D" uid="uid://b7ar6pysqsplc" path="res://assets/mw03_c.png" id="2_7vgbo"]
+[ext_resource type="PackedScene" uid="uid://u05mid78f7ty" path="res://scenes/UI/actions_ui.tscn" id="2_pm35d"]
+[ext_resource type="PackedScene" uid="uid://b8lp1k4t1xcxu" path="res://scenes/UI/button.tscn" id="13_p8wfj"]
+[ext_resource type="Script" path="res://scenes/UI/options_button.gd" id="14_4xx0x"]
+[ext_resource type="PackedScene" uid="uid://7l72x50aowsw" path="res://scenes/UI/rich_text_label.tscn" id="15_iyeiv"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_npu6t")
+
+[node name="Mw03C" type="Sprite2D" parent="."]
+position = Vector2(54, 29)
+texture = ExtResource("2_7vgbo")
+
+[node name="EnergyLabel" parent="." instance=ExtResource("15_iyeiv")]
+offset_left = -300.0
+offset_top = -231.0
+offset_right = -160.0
+offset_bottom = -197.0
+size_flags_horizontal = 4
+text = "[center]Energy: 0"
+
+[node name="PHLabel" parent="." instance=ExtResource("15_iyeiv")]
+offset_left = -300.0
+offset_top = -189.0
+offset_right = -160.0
+offset_bottom = -155.0
+size_flags_horizontal = 4
+text = "♥♥♥♥♥"
+
+[node name="EHLabel" parent="." instance=ExtResource("15_iyeiv")]
+offset_left = -152.0
+offset_top = -189.0
+offset_right = -12.0
+offset_bottom = -155.0
+size_flags_horizontal = 4
+text = "♥♥♥♥♥"
+
+[node name="EnemyActionLabel" parent="." instance=ExtResource("15_iyeiv")]
+offset_left = 0.0
+offset_top = -188.0
+offset_right = 140.0
+offset_bottom = -154.0
+size_flags_horizontal = 4
+text = "[center]Enemy Act"
+
+[node name="Camera2D" parent="." instance=ExtResource("1_5y1sr")]
+
+[node name="Actions" parent="." instance=ExtResource("2_pm35d")]
+
+[node name="Arena" parent="." instance=ExtResource("1_p8e1v")]
+cell_offset = 0
+
+[node name="OptionsButton" parent="." instance=ExtResource("13_p8wfj")]
+offset_left = 172.0
+offset_top = -230.0
+offset_right = 309.0
+offset_bottom = -198.0
+text = "Options"
+script = ExtResource("14_4xx0x")
+
+[editable path="OptionsButton"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkifi6g5yk6md"]
+
+[ext_resource type="Script" path="res://scenes/entity/character.gd" id="1_jo82v"]
+[ext_resource type="Texture2D" uid="uid://bwsposidmoys1" path="res://assets/sprites/mw.aseprite" id="2_v020j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ghrhn"]
+radius = 56.7646
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_jo82v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_v020j")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ghrhn")
+
+[node name="HitPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="ActionPlayer" type="AudioStreamPlayer" parent="."]

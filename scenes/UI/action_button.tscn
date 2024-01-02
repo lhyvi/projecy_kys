@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bot8pnlcwvsx"]
+
+[ext_resource type="Script" path="res://scenes/UI/action_button.gd" id="1_0xjtq"]
+[ext_resource type="PackedScene" uid="uid://7l72x50aowsw" path="res://scenes/UI/rich_text_label.tscn" id="1_ik4k6"]
+[ext_resource type="PackedScene" uid="uid://b8lp1k4t1xcxu" path="res://scenes/UI/button.tscn" id="2_u8vmf"]
+
+[node name="ActionButton" type="Control"]
+custom_minimum_size = Vector2(131.53, 34)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+script = ExtResource("1_0xjtq")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 105
+dragger_visibility = 2
+
+[node name="Button" parent="HSplitContainer" instance=ExtResource("2_u8vmf")]
+layout_mode = 2
+text = "Among Us"
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" parent="HSplitContainer" instance=ExtResource("1_ik4k6")]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[center]0"
+autowrap_mode = 0

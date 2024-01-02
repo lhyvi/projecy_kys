@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b85aw5tj12g4v"]
+
+[ext_resource type="Material" uid="uid://doto8ytdkye6p" path="res://scenes/shader.tres" id="1_bbnpf"]
+[ext_resource type="Script" path="res://scenes/shader.gd" id="3_r1d4i"]
+
+[node name="Shader" type="ColorRect"]
+top_level = true
+material = ExtResource("1_bbnpf")
+offset_left = -332.0
+offset_top = -246.0
+offset_right = 320.0
+offset_bottom = 256.0
+mouse_filter = 2
+script = ExtResource("3_r1d4i")

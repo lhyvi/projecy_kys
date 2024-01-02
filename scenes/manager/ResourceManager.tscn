@@ -1,0 +1,30 @@
+[gd_scene load_steps=11 format=3 uid="uid://c40yim0l23xrl"]
+
+[ext_resource type="Script" path="res://scenes/manager/ResourceManager.gd" id="1_2rc8x"]
+[ext_resource type="PackedScene" uid="uid://m06ul8qtuxw0" path="res://scenes/UI/options.tscn" id="3_3byed"]
+[ext_resource type="Gradient" uid="uid://ltr3nbo2ka75" path="res://assets/mono_palette.tres" id="3_aalh3"]
+[ext_resource type="Gradient" uid="uid://j3072gtvuels" path="res://assets/netsuijou_palette.tres" id="4_7nnb0"]
+[ext_resource type="PackedScene" uid="uid://dej6m2s6q7cg2" path="res://scenes/UI/pop_up.tscn" id="4_y6jqb"]
+[ext_resource type="AudioStream" uid="uid://clm2uxoqb770t" path="res://assets/sounds/UI/button_press.wav" id="5_mw801"]
+[ext_resource type="Gradient" uid="uid://c0m342fn2loc7" path="res://assets/test_palette.tres" id="5_wc013"]
+
+[sub_resource type="Gradient" id="Gradient_lljmd"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.259067, 0.512953, 0.761658)
+colors = PackedColorArray(0.015, 0.0759167, 0.1, 1, 0.393378, 0.44375, 0.47973, 1, 0.642703, 0.725, 0.783784, 1, 0.82, 0.925, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_rxvu6"]
+colors = PackedColorArray(0.046875, 0.046875, 0.0507813, 1, 0.75, 0.6625, 0.4875, 1)
+
+[sub_resource type="Gradient" id="Gradient_gji4o"]
+colors = PackedColorArray(0.0787733, 0.14, 0.0504, 1, 0.68, 0.64056, 0.2856, 1)
+
+[node name="ResourceManager" type="Node"]
+script = ExtResource("1_2rc8x")
+main_menu_scene = "res://scenes/game/deus_scene/menu.tscn"
+options_scene = ExtResource("3_3byed")
+popup_scene = ExtResource("4_y6jqb")
+gradients = Array[Gradient]([ExtResource("3_aalh3"), ExtResource("4_7nnb0"), ExtResource("5_wc013"), SubResource("Gradient_lljmd"), SubResource("Gradient_rxvu6"), SubResource("Gradient_gji4o")])
+
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_mw801")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://7l72x50aowsw"]
+
+[ext_resource type="Theme" uid="uid://cqr5jvlnfnglw" path="res://scenes/UI/ui_theme.tres" id="1_y1upe"]
+
+[node name="RichTextLabel" type="RichTextLabel"]
+offset_left = 2.0
+offset_top = 41.0
+offset_right = 179.0
+offset_bottom = 81.0
+size_flags_vertical = 4
+theme = ExtResource("1_y1upe")
+bbcode_enabled = true
+text = "[b]Tee Hee~[/b]"
+fit_content = true
+scroll_active = false

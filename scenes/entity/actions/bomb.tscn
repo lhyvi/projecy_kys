@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://xu5ysdfjr0pr"]
+
+[ext_resource type="Script" path="res://scenes/entity/actions/bomb.gd" id="1_ffuic"]
+[ext_resource type="Texture2D" uid="uid://bvgltcsel0wju" path="res://assets/sprites/bomb.aseprite" id="1_nu5xb"]
+[ext_resource type="PackedScene" uid="uid://duwkhsnbcrfb1" path="res://scenes/entity/actions/bomb_splash.tscn" id="2_ebi2m"]
+
+[node name="Bomb" type="Node2D"]
+script = ExtResource("1_ffuic")
+bomb_splash_scene = ExtResource("2_ebi2m")
+explode_speed = 0.5
+pos = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nu5xb")

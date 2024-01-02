@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://doto8ytdkye6p"]
+
+[ext_resource type="Shader" path="res://scenes/shader.gdshader" id="1_muy3o"]
+[ext_resource type="Texture2D" uid="uid://d3wjg4ywqkrk" path="res://assets/pixel_shader_gradient.tres" id="2_b3l4t"]
+
+[resource]
+shader = ExtResource("1_muy3o")
+shader_parameter/pixel_size = 1
+shader_parameter/bayer_level = 2
+shader_parameter/_Spread = 0.232
+shader_parameter/dither_size = 1.0
+shader_parameter/palette_color_count = 3
+shader_parameter/gradient_offsets = PackedFloat32Array(0, 0.225806, 0.75)
+shader_parameter/gradient = ExtResource("2_b3l4t")
